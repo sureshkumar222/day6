@@ -1,0 +1,73 @@
+//1. https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+class Movie{
+    constructor(title,studio,rating = 'PG'){
+        this.studio = studio;
+        this.rating = rating;
+        this.title= title;
+    }
+    getPG(arr){
+        let temp = arr.filter( x => {
+            if(x.rating == 'PG')
+                return true;
+        });
+        return temp;
+    }
+
+}
+let objMovie = new Movie ("Casino Royale", "Eon Productions", "PG13");
+
+//2.https://github.com/rvsp/typescript-oops/blob/master/Practice/class-circle.md
+class Cirlce{
+    constructor(radius=1.0,color="red"){
+        this.radius= radius;
+        this.color= color;
+    }
+    getRadius(){
+        return this.radius;
+    }
+    setRadius(radius){
+        this.radius = radius;
+    }
+    setColor(color){
+        this.color = color;
+    }
+    toString(){
+        return this.toString(this.radius), this.color;
+    }
+    getArea(){
+        let area = 3.14 *this.radius*this.radius
+        return area;
+    }
+    getCircumference(){
+        let c = 2*3.14*this.radius;
+        return c;
+    }
+}
+
+let objCir = new Cirlce();
+
+3
+class uber{
+            constructor(distance,waiting,rate){
+                this.distance=distance;
+                this.waiting=waiting;
+                this.rate=rate;
+
+            }
+            setDistance(dis){
+                this.distance=dis;
+            }
+            getuberDetails(){
+                return(`the distance is ${this.distance} with the waiting ${this.waiting} and the rate is ${rate}`);
+
+            }
+            getPrice(){
+                let totalprice =(this.distance* this.rate);
+                return totalprice;
+            }
+        }
+
+        let  cust = new uber (50,10,20)
+        console.log(cust.getPrice());
+        cust.setDistance(100);
+        console.log(cust.getPrice());
